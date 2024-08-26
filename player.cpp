@@ -378,10 +378,8 @@ void UpdatePlayer(void)
 		break;
 	case PLAYERSTATE_DETH:
 		g_player.nCounterState--;
-		if (g_player.nCounterState <= 0 && g_player.nCntLife <= 0)
+		if (g_player.nCounterState <= 0)
 		{
-			g_player.bDisp = false;
-			SetFade(MODE_RESULT);
 			return;
 		}
 		break;
@@ -434,7 +432,7 @@ void HitPlayer(int nDamage)
 		g_player.bDisp = false;
 		g_player.state = PLAYERSTATE_DETH;
 		g_player.nCounterState = 60;
-		g_player.nCntLife--;
+		SetFade(MODE_RESULT);
 	}
 	else
 	{
@@ -447,7 +445,6 @@ void HitPlayer(int nDamage)
 		pVtx[2].col = D3DXCOLOR(1.0f, 0.0f, 0.0f, 1.0f);
 		pVtx[3].col = D3DXCOLOR(1.0f, 0.0f, 0.0f, 1.0f);
 
-		pVtx += 4;
 	}
 	//ƒAƒ“ƒƒbƒN
 	g_pVteBuffPlayer->Unlock();

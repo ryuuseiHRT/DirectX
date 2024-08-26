@@ -87,10 +87,9 @@ void UpdateGame(void)
 		g_nCounterGameState++;
 		if (g_nCounterGameState >= 60)
 		{
+			SetFade(MODE_RESULT);
 			g_nCounterGameState = 0;
 			g_gameState = GAMESTATE_NONE;	// ‰½‚à‚µ‚Ä‚¢‚È‚¢
-
-			SetFade(MODE_RESULT);
 		}
 		break;
 
