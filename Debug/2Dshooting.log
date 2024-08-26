@@ -1,0 +1,3 @@
+﻿  player.cpp
+C:\Users\student\source\repos\2Dshooting\player.cpp(362,6): warning C4101: 'nCntPlayer': ローカル変数は 1 度も使われていません。
+  2Dshooting.vcxproj -> C:\Users\student\source\repos\2Dshooting\Debug\2Dshooting.exe
